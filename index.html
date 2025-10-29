@@ -1,69 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>DragoneStone E-commerce Site</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="DragonStone — Sustainable Living, Redefined." />
+  <meta name="keywords" content="sustainable, eco-friendly, ecommerce, DragonStone" />
+  <meta name="author" content="DragonStone Team" />
+  <title>DragonStone | Sustainable Living</title>
 
-    <body>
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+</head>
+<body>
 
-<header>
-    <!-- Top Header -->
-    <section id="top-header">
-        <div class="header-container">
-            <a href="index.html" class="logo"><img src="img/logo.png" alt="DragonStone Logo"></a>
+  <!-- ================= HEADER ================= -->
+  <header>
+    <!-- Top Tier -->
+    <div class="header-top">
+      <div class="logo">
+        <span>DragonStone</span>
+        <img src="img/logo.png" alt="DragonStone Logo" />
+      </div>
+      <div class="search-bar">
+        <input type="text" placeholder="Search eco-friendly products...">
+        <!-- SVG search button -->
+        <button aria-label="Search">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+	  <div class="header-icons">
+		<a href="#"><i class="fa fa-user"></i></a>
+		<a href="#"><i class="fa fa-shopping-cart"></i></a>
+	  </div>
+    </div>
 
-            <div class="search-bar">
-                <input type="text" placeholder="Search eco-friendly products...">
-                <button><i class="fa fa-search"></i></button>
-            </div>
+    <!-- Bottom Tier / Navigation -->
+    <nav class="header-bottom">
+      <div class="menu-toggle">☰ Shop All</div>
+      <ul class="nav-links">
+        <li><a href="#">Cleaning & Household Supplies</a></li>
+        <li><a href="#">Kitchen & Dining</a></li>
+        <li><a href="#">Home Décor & Living</a></li>
+        <li><a href="#">Bathroom & Personal Care</a></li>
+        <li><a href="#">Lifestyle & Wellness</a></li>
+        <li><a href="#">Kids & Pets</a></li>
+        <li><a href="#">Outdoor & Garden</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <div class="header-icons">
-                <a href="login.html"><img src="img/user-icon.png" alt="Login"></a>
-                <a href="cart.html"><img src="img/cart-icon.png" alt="Cart"></a>
-            </div>
+  <!-- ================= HERO ================= -->
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Sustainable Living, Redefined.</h1>
+      <p>Shop consciously, earn EcoPoints, and join the movement.</p>
+      <div class="hero-buttons">
+        <a href="#" class="btn btn-primary">Shop Now</a>
+        <a href="#" class="btn btn-outline-light">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SHOP BY FEATURE / CATEGORIES ================= -->
+  <section class="categories container fade-in">
+    <h2 class="section-title">Shop by Category</h2>
+    <div class="row">
+      <!-- Repeat one card per category -->
+      <div class="col-md-4 col-sm-6 category-tile">
+        <img src="img/Cleaning & Household (2).jpeg" alt="Cleaning & Household" />
+        <h3>Cleaning & Household Supplies</h3>
+        <a href="#" class="btn btn-outline-secondary">Shop Now</a>
+      </div>
+      <div class="col-md-4 col-sm-6 category-tile">
+        <img src="img/Kitchen (2).jpeg" alt="Kitchen & Dining" />
+        <h3>Kitchen & Dining</h3>
+        <a href="#" class="btn btn-outline-secondary">Shop Now</a>
+      </div>
+      <div class="col-md-4 col-sm-6 category-tile">
+        <img src="img/Home decor.jpeg" alt="Home Décor & Living" />
+        <h3>Home Décor & Living</h3>
+        <a href="#" class="btn btn-outline-secondary">Shop Now</a>
+      </div>
+      <div class="col-md-4 col-sm-6 category-tile">
+        <img src="img/Bathroom (2).jpeg" alt="Bathroom & Personal Care" />
+        <h3>Bathroom & Personal Care</h3>
+        <a href="#" class="btn btn-outline-secondary">Shop Now</a>
+      </div>
+      <div class="col-md-4 col-sm-6 category-tile">
+        <img src="img/Lifestyle.jpeg" alt="Lifestyle & Wellness" />
+        <h3>Lifestyle & Wellness</h3>
+        <a href="#" class="btn btn-outline-secondary">Shop Now</a>
+      </div>
+      <div class="col-md-4 col-sm-6 category-tile">
+        <img src="img/Toys.jpeg" alt="Kids & Pets" />
+        <h3>Kids & Pets</h3>
+        <a href="#" class="btn btn-outline-secondary">Shop Now</a>
+      </div>
+      <div class="col-md-4 col-sm-6 category-tile">
+        <img src="img/Outdoor.jpeg" alt="Outdoor & Garden" />
+        <h3>Outdoor & Garden</h3>
+        <a href="#" class="btn btn-outline-secondary">Shop Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FEATURES ================= -->
+  <section class="features container-fluid fade-in">
+    <div class="row text-center">
+      <div class="col-md-4 feature-card">
+        <div class="icon">♻️</div>
+        <h4>Carbon Footprint Calculator</h4>
+        <p>Understand your product impact.</p>
+      </div>
+      <div class="col-md-4 feature-card">
+        <div class="icon">🌿</div>
+        <h4>Subscribe & Save</h4>
+        <p>Never run out of essentials.</p>
+      </div>
+      <div class="col-md-4 feature-card">
+        <div class="icon">🏷️</div>
+        <h4>EcoPoints</h4>
+        <p>Earn rewards for every mindful purchase.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= COMMUNITY ================= -->
+  <section class="community container fade-in">
+    <h2>From the DragonStone Community</h2>
+    <div class="community-posts">
+      <div class="post">🌱 Tip: Composting 101</div>
+      <div class="post">🌍 Forum: Plastic-Free July</div>
+    </div>
+    <a href="#" class="btn btn-success">Join the DragonStone Community →</a>
+  </section>
+
+  <!-- ================= MISSION ================= -->
+  <section class="mission container-fluid fade-in">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="https://source.unsplash.com/600x400/?sustainable" alt="DragonStone Mission" />
+      </div>
+      <div class="col-md-6">
+        <h2>More Than a Store - A Movement.</h2>
+        <p>DragonStone exists to make sustainable living accessible, educational, and aspirational.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="row">
+      <div class="col-md-3">
+        <h5>Company</h5>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Customer Care</h5>
+        <ul>
+          <li><a href="#">FAQs</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Community</h5>
+        <ul>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Challenges</a></li>
+          <li><a href="#">Rewards</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h5>Stay Connected</h5>
+        <form>
+          <input type="email" placeholder="Your email" aria-label="Email" />
+          <button type="submit">Subscribe</button>
+        </form>
+        <div class="social-icons">
+          <a href="https://www.instagram.com"><img src="img/icons/instagram.svg" alt="Instagram" /></a>
+          <a href="https://www.youtube.com"><img src="img/icons/youtube.png" alt="YouTube" /></a>
+          <a href="https://www.linkedin.com"><img src="img/icons/linkedin.png" alt="LinkedIn" /></a>
         </div>
-    </section>
+      </div>
+    </div>
+	<div class="text-center mt-3" style="font-size: 0.85rem; color: #c8e6c9;">
+    &copy; 2025 DragonStone. All rights reserved.
+    </div>
+  </footer>
 
-    <!-- Bottom Header -->
-    <section id="bottom-header">
-        <div class="nav-container">
-            <!-- Menu Button -->
-            <button id="menu-btn">☰</button>
-
-            <!-- Hidden Dropdown Menu -->
-            <div id="dropdown-menu" class="hidden">
-                <a href="shop-all.html">Shop All</a>
-                <a href="subscribe.html">Subscribe & Save</a>
-                <a href="eco-points.html">Shop by EcoPoints</a>
-                <a href="calculator.html">Shop by Carbon footprint</a>
-                <a href="community.html">Community Hub</a>
-                <a href="about.html">About Us</a>
-                <a href="support.html">Help & Support</a>
-                <a href="account.html">Account</a>
-            </div>
-
-            <!-- Category Bar -->
-            <ul class="category-menu">
-                <li><a href="cleaning.html">Cleaning & Household</a></li>
-                <li><a href="kitchen.html">Kitchen & Dining</a></li>
-                <li><a href="decor.html">Home Décor & Living</a></li>
-                <li><a href="bathroom.html">Bathroom & Personal Care</a></li>
-                <li><a href="lifestyle.html">Lifestyle & Wellness</a></li>
-                <li><a href="kids.html">Kids & Pets</a></li>
-                <li><a href="outdoor.html">Outdoor & Garden</a></li>
-            </ul>
-        </div>
-    </section>
-</header>
-
-
-
-
-
-        <script src="script.js"></script>
-    </body>
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
