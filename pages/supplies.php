@@ -3,93 +3,107 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Eco-friendly Cleaning & Household Supplies | DragonStone" />
+  <meta name="keywords" content="eco-friendly, cleaning, household, sustainable, DragonStone" />
+  <meta name="author" content="DragonStone Team" />
+  <link rel="icon" href="../img/favicon.ico" type="image/x-icon" />
+
   <title>Cleaning & Household Supplies | DragonStone</title>
 
-<!-- Stylesheets -->
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <!-- ========== LINKED STYLESHEETS ========== -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
 </head>
+
 <body>
+  <!-- ================= HEADER ================= -->
+  <header>
+    <?php include '../includes/header.php'; ?>
+  </header>
 
-  <!-- ====== Header Include ====== -->
- <?php include 'includes/header.php'; ?>
-
-  <!-- ====== Hero Section ====== -->
-  <section class="hero">
-    <div class="hero-content">
+  <!-- ================= HERO BANNER ================= -->
+  <section class="hero fade-in" style="background-image: url('../img/products/supplies/supplies.jpeg');">
+    <div class="hero-overlay">
       <h1>Cleaning & Household Supplies</h1>
-      <p>Keep your home fresh — and the planet cleaner.</p>
+      <p>Conscious cleaning starts here. Discover sustainable swaps for everyday essentials.</p>
     </div>
   </section>
 
-  <!-- ====== Product Section ====== -->
-  <section class="product-section">
+  <!-- ================= PRODUCT GRID ================= -->
+  <section class="product-section fade-in">
+    <h2 class="section-title text-center">Eco-Friendly Cleaning Products</h2>
     <div class="product-grid">
+      
+      <!-- Product Card -->
       <div class="product">
-        <img src="images/compostable-pods.jpg" alt="Compostable Cleaning Pods" />
+        <img src="../img/products/supplies/Plant-based laundry detergent sheets (1).jpeg" alt="Plant-Based Laundry Detergent" />
         <div class="product-info">
-          <h3>Compostable Cleaning Pods</h3>
-          <p>Plant-powered cleaning that vanishes waste.</p>
-          <span class="price">$7.99</span>
+          <h3>Plant-Based Laundry Detergent</h3>
+          <p>Gentle on fabrics, tough on stains. Biodegradable and refillable.</p>
+          <div class="price">R129.99</div>
+          <a href="product.php?id=101" class="btn btn-outline-success mt-2">View Product</a>
         </div>
       </div>
 
       <div class="product">
-        <img src="images/refillable-bottle.jpg" alt="Refillable Spray Bottle" />
+        <img src="../img/products/supplies/Refillable glass spray bottles (1).jpeg" alt="Reusable Paper Towels" />
         <div class="product-info">
-          <h3>Refillable Glass Spray Bottle</h3>
-          <p>Designed for reuse, made to last.</p>
-          <span class="price">$14.99</span>
+          <h3>Reusable Paper Towels</h3>
+          <p>Washable, absorbent, and made from bamboo fiber.</p>
+          <div class="price">R89.00</div>
+          <a href="product.php?id=102" class="btn btn-outline-success mt-2">View Product</a>
         </div>
       </div>
 
       <div class="product">
-        <img src="images/laundry-sheets.jpg" alt="Laundry Detergent Sheets" />
+        <img src="../img/products/supplies/Compostable cleaning pods multi-surface.png" alt="All-Purpose Cleaner" />
         <div class="product-info">
-          <h3>Plant-Based Laundry Sheets</h3>
-          <p>No plastic jugs, just clean clothes.</p>
-          <span class="price">$9.99</span>
+          <h3>All-Purpose Cleaner</h3>
+          <p>Non-toxic formula with citrus oils. Safe for kids and pets.</p>
+          <div class="price">R74.50</div>
+          <a href="product.php?id=103" class="btn btn-outline-success mt-2">View Product</a>
         </div>
       </div>
 
-      <div class="product">
-        <img src="images/wool-dryer-balls.jpg" alt="Wool Dryer Balls" />
-        <div class="product-info">
-          <h3>Wool Dryer Balls</h3>
-          <p>Reusable, chemical-free, and long-lasting.</p>
-          <span class="price">$12.99</span>
-        </div>
-      </div>
+	<div class="product">
+	  <img src="../img/products/supplies/Wool dryer balls (1).png" alt="Wool Dryer Balls" />
+	  <div class="product-info">
+		<h3>Wool Dryer Balls</h3>
+		<p>Reusable alternative to dryer sheets. Softens clothes naturally and reduces drying time.</p>
+		<div class="price">R89.99</div>
+		<a href="product.php?id=105" class="btn btn-outline-success mt-2">View Product</a>
+	  </div>
+	</div>
 
-      <div class="product">
-        <img src="images/biodegradable-bags.jpg" alt="Biodegradable Trash Bags" />
-        <div class="product-info">
-          <h3>Biodegradable Trash Bags</h3>
-          <p>Durable and compostable for sustainable waste disposal.</p>
-          <span class="price">$8.49</span>
-        </div>
-      </div>
+	  <div class="product">
+	    <img src="../img/products/supplies/Biodegradable trash bags (1).jpeg" alt="Biodegradable Trash Bags" />
+		<div class="product-info">
+		  <h3>Biodegradable Trash Bags</h3>
+		  <p>Durable, leak-resistant bags made from plant-based materials. Break down naturally in compost.</p>
+		 <div class="price">R59.50</div>
+		<a href="product.php?id=106" class="btn btn-outline-success mt-2">View Product</a>
+		</div>
+	  </div>
 
-      <div class="product">
-        <img src="images/charcoal-bag.jpg" alt="Charcoal Purifying Bags" />
-        <div class="product-info">
-          <h3>Natural Air Purifying Charcoal Bags</h3>
-          <p>Nature’s solution to odor and moisture.</p>
-          <span class="price">$11.99</span>
-        </div>
-      </div>
+	  <div class="product">
+	    <img src="../img/products/supplies/Natural air purifying charcoal bags (1).jpeg" alt="Natural Air Purifying Charcoal Bags" />
+	    <div class="product-info">
+		  <h3>Charcoal Air Purifying Bags</h3>
+		  <p>Eliminate odors and moisture with activated bamboo charcoal. Ideal for closets, cars, and shoes.</p>
+		<div class="price">R69.00</div>
+		<a href="product.php?id=107" class="btn btn-outline-success mt-2">View Product</a>
+		</div>
+	  </div>
+
     </div>
   </section>
 
-  <!-- ====== Sustainability Note ====== -->
-  <section class="note">
-    Every product here helps cut single-use plastic from your daily cleaning routine.
-  </section>
+  <!-- ================= FOOTER ================= -->
+  <?php include '../includes/footer.php'; ?>
 
-  <!-- ====== Footer Include ====== -->
- <?php include 'includes/footer.php'; ?>
-
-
+  <!-- ========== SCRIPTS ========== -->
+  <script src="../script.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" defer></script>
 </body>
 </html>
