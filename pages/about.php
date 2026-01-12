@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | DragonStone</title>
 
-  <!-- Inline styles (integrates easily with your current structure) -->
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
     body {
@@ -106,9 +109,7 @@
 <body>
 
   <!-- ================= HEADER ================= -->
-  <header>
-    <h1>DragonStone</h1>
-  </header>
+  <?php include '../includes/header.php'; ?>
 
   <!-- ================= HERO SECTION ================= -->
   <section class="hero">
@@ -188,9 +189,7 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer>
-    <p>© 2025 DragonStone. Sustainable Living, Beautifully Designed.</p>
-  </footer>
+  <?php include '../includes/footer.php'; ?>
 
 </body>
 </html>

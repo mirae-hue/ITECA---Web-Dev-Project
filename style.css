@@ -4,14 +4,20 @@
 :root {
   --ds-forest: #2b6e4a;
   --ds-fern: #78a980;
+  --ds-moss: #8fbf87;
   --ds-teal: #2a6f6b;
   --ds-earth: #78654a;
   --ds-muted: #f6f7f5;
+  --ds-light: #f4f2ee;
+  --ds-stone: #6b6b6b;
+  --ds-ink: #1f1f1f;
   --ds-card: #ffffff;
   --ds-text: #153425;
   --ds-muted-text: #55605a;
   --ds-accent: #c9e4d6;
   --transition: all 0.22s ease;
+  --radius: 12px;
+
 }
 
 * {
@@ -101,8 +107,10 @@ header {
 }
 
 .header-icons {
+  position: relative;
   display: flex;
-  gap: 12px;
+  gap: 1rem; /* or 12px, pick one */
+  align-items: center;
 }
 
 .header-icons a {
@@ -114,6 +122,22 @@ header {
 
 .header-icons a:hover {
   color: var(--ds-accent);
+}
+
+.cart-wrapper {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: var(--ds-forest);
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 /* ----- BOTTOM TIER ----- */
@@ -164,7 +188,6 @@ header {
   color: var(--ds-forest);
 }
 
-/* Dropdown */
 .menu-dropdown {
   position: relative;
 }
@@ -217,7 +240,7 @@ header {
 
 /* ================= HERO ================= */
 .hero {
-  background: url('img/home.jpeg') center/cover no-repeat;
+  background: url('/dragonstone/img/home.jpeg') center/cover no-repeat;
   height: 85vh;
   display: flex;
   justify-content: center;
@@ -273,7 +296,7 @@ header {
 
 /* ================= FEATURES ================= */
 .features-section {
-  background-color: rgba(248, 250, 248, 0.3);
+  background-color: rgba(245, 245, 242, 0.11);
   color: var(--ds-forest);
   padding: 4rem 2rem;
   text-align: center;
@@ -285,24 +308,107 @@ header {
 }
 
 .features-section .feature-card {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.45);
   padding: 0.3rem;
-  border-radius: 12px;
+  border-radius: 25px;
   flex: 1 1 200px;
   max-width: 100%;
 }
+.features-section .feature-card h4{
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
 
+.features-section .feature-card h4 a{
+  color: var(--primary-color);
+  text-decoration: none;
+}
 .feature-card {
   transition: transform 0.3s ease;
 }
 
 .feature-card:hover {
   transform: scale(1.05);
+  
+}
+
+/* ================= COMMUNITY ================= */
+.community {
+  background-color: rgba(245, 245, 242, 0.45);
+  margin: 5rem auto;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.community-posts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.post {
+  background-color: rgba(245, 245, 242, 0.85);;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  color: var(--text-dark);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.post:hover {
+  transform: translateY(-4px);
+}
+
+
+/* ================= MISSION ================= */
+.mission {
+  background-color: rgba(245, 245, 242, 0.85);
+  padding: 4rem 2rem;
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  max-width: 1200px;
+  margin: 2rem auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mission img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.mission h2 {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+
+.mission p {
+  font-size: 1.1rem;
+  color: #1f1f1f;
+  line-height: 1.5;
+}
+
+.mission-text h2 a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.mission-text h2 a:hover {
+  background-color: rgba(43, 110, 74, 0.1);
+  color: var(--ds-forest);
+  text-decoration: none;
 }
 
 /* ================= FOOTER ================= */
 footer {
-  background-color: var(--footer-bg);
+  background-color: #f6f7f5;
   color: var(--footer-text);
   padding: 3.5rem 2rem;
   font-size: 0.9rem;
@@ -351,33 +457,6 @@ footer ul li a:hover {
   color: var(--accent-color);
 }
 
-footer .newsletter-form {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-footer input {
-  padding: 0.5rem;
-  border-radius: 5px;
-  border: none;
-}
-
-footer button {
-  background-color: var(--primary-color);
-  color: var(--text-light);
-  border: none;
-  padding: 0.5rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-footer button:hover {
-  background-color: rgba(43, 110, 74, 0.1);
-  color: var(--ds-forest);
-}
-
 footer .social-icons {
   margin-top: 0.5rem;
   display: flex;
@@ -390,57 +469,14 @@ footer .social-icons img {
   height: 20px;
 }
 
-/* ================= MISSION ================= */
-.mission {
-  background-color: rgba(120, 101, 74, 0.85);
-  padding: 4rem 2rem;
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-  border-radius: 10px;
-  max-width: 1200px;
-  margin: 2rem auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.mission img {
-  width: 100%;
-  border-radius: 10px;
-}
-
-.mission h2 {
-  color: var(--primary-color);
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-
-.mission p {
-  font-size: 1.1rem;
-  color: #1f1f1f;
-  line-height: 1.5;
-}
-
-.mission-text h2 a {
-  color: var(--primary-color);
-  text-decoration: none;
-}
-
-.mission-text h2 a:hover {
-  text-decoration: underline; /* or a subtle color change */
-}
-
-
 /* ================= RESPONSIVE DISPLAY MOBILE ================= */
 @media (max-width: 768px) {
 
-  /* ----- Hide desktop elements ----- */
   .nav-links,
   .search-bar {
     display: none;
   }
 
-  /* ----- Header top layout ----- */
   .header-top {
     display: flex;
     justify-content: space-between;
@@ -448,7 +484,6 @@ footer .social-icons img {
     padding: 6px 12px;
   }
 
-  /* ----- Menu button (three lines) ----- */
   .menu-btn {
     display: block;
     font-size: 1.5rem;
@@ -482,12 +517,10 @@ footer .social-icons img {
     border-radius: 8px;
   }
 
-  /* Show dropdown when JS toggles 'show' */
   .menu-dropdown .dropdown-content.show {
     display: flex;
   }
 
-  /* Dropdown links */
   .dropdown-content a {
     color: var(--ds-forest);
     padding: 10px 16px;
@@ -500,7 +533,6 @@ footer .social-icons img {
     background-color: rgba(43, 110, 74, 0.1);
   }
 
-  /* ----- Center logo ----- */
   .logo {
     flex: 1;
     text-align: center;
@@ -514,14 +546,12 @@ footer .social-icons img {
     display: none;
   }
 
-  /* ----- Icons on right ----- */
   .header-icons {
     display: flex;
     gap: 12px;
     font-size: 1.2rem;
   }
 
-  /* ----- Mobile search overlay ----- */
   .search-overlay {
     display: none;
     position: fixed;
@@ -625,4 +655,319 @@ footer .social-icons img {
   font-weight: 600;
   color: var(--primary-color);
   font-size: 1.1rem;
+}
+
+/* ================= USER DASH ================= */
+.dashboard-container {
+  padding: 2rem;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card i {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 0.5rem;
+}
+
+.card h2 {
+  margin: 0.5rem 0;
+}
+
+.card .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background: #2e7d32;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.card .btn:hover {
+  background: #1b5e20;
+}
+
+.points {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+/* ================= CART ================= */
+/* Base */
+body {
+    font-family: Arial, sans-serif;
+    background: var(--ds-light);
+    margin: 0;
+    padding: 0;
+    color: var(--ds-ink);
+}
+
+/* Cart Page Container */
+.cart-page {
+    max-width: 960px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.cart-page h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    border-bottom: 2px solid var(--ds-forest);
+    padding-bottom: 0.5rem;
+    color: var(--ds-forest);
+}
+
+/* Cart Table */
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 0.75rem;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.cart-table th {
+    background: var(--ds-light);
+    color: var(--ds-ink);
+    font-weight: 600;
+}
+
+.cart-table td img {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.cart-table tr:nth-child(even) {
+    background: #fafafa;
+}
+
+/* Remove Button */
+.cart-remove {
+    background: none;
+    border: none;
+    color: var(--ds-forest);
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: color var(--transition);
+}
+
+.cart-remove:hover {
+    color: var(--ds-moss);
+}
+
+/* Cart header */
+.cart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.currency-form select {
+    padding: 0.4rem 0.6rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--ds-stone);
+}
+
+
+/* Totals */
+.cart-total {
+    text-align: left;
+    font-weight: 600;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    color: var(--ds-ink);
+}
+
+/* Footer Buttons */
+.cart-footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.checkout-btn,
+.back-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--radius);
+    cursor: pointer;
+    font-weight: 600;
+    transition: background var(--transition), color var(--transition);
+}
+
+.checkout-btn {
+    background: var(--ds-forest);
+    color: #fff;
+}
+
+.checkout-btn:hover {
+    background: var(--ds-moss);
+}
+
+.back-btn {
+    background: #e0e0e0;
+    color: var(--ds-ink);
+}
+
+.back-btn:hover {
+    background: #d0d0d0;
+}
+
+/* ========= USER SUBSCRIPTIONS PAGE ========= */
+
+/* Layout wrapper */
+.subscription-page {
+    max-width: 1100px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+/* Grid of cards */
+.subscription-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+}
+
+/* Card base */
+.subscription-card {
+    background: #fff;
+    border-radius: var(--radius);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    padding: 1.5rem;
+    transition: transform 0.2s ease;
+}
+
+.subscription-card:hover {
+    transform: translateY(-4px);
+}
+
+/* ================= IMAGE + HOVER WRAPPER ================= */
+
+.subscription-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+}
+
+.subscription-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Hover content ONLY inside the image area */
+.subscription-image-wrapper .subscription-hover {
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.96);
+    padding: 1rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    overflow-y: auto;
+}
+
+/* Typography inside hover */
+.subscription-hover p {
+    margin-top: 0;
+}
+
+.subscription-hover h4 {
+    margin-top: 1rem;
+    color: var(--ds-forest);
+}
+
+.subscription-hover ul {
+    padding-left: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.subscription-hover ul li a {
+    color: var(--ds-forest);
+    text-decoration: none;
+}
+
+.subscription-hover ul li a:hover {
+    text-decoration: underline;
+}
+
+/* ================= FRONT CONTENT ================= */
+
+.subscription-front {
+    text-align: center;
+}
+
+.subscription-front h3 {
+    margin: 0;
+    color: var(--ds-forest);
+    border-bottom: 2px solid var(--ds-forest);
+    padding-bottom: 0.3rem;
+}
+
+.subscription-front p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0 1rem;
+}
+
+/* ================= BUTTONS ================= */
+
+.subscribe-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.7rem 1.2rem;
+    background: var(--ds-forest);
+    color: #fff;
+    border-radius: var(--radius);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background var(--transition);
+}
+
+.subscribe-btn:hover {
+    background: var(--ds-moss);
+}
+
+/* Back button uses same style */
+.btn-secondary {
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    background: var(--ds-moss);
+    color: #fff;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background var(--transition);
+}
+
+.btn-secondary:hover {
+    background: var(--ds-forest);
 }

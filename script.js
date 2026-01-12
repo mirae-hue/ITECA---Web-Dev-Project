@@ -55,27 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   document.querySelectorAll("section").forEach(section => observer.observe(section));
 
-  // ===== CART =====
-  const cartOverlay = document.getElementById('cart-overlay');
-  const cartBack = document.getElementById('cart-back');
-  const checkoutBtn = document.getElementById('checkout-btn');
-
-  if (cartOverlay && cartBack) {
-    function openCart() { cartOverlay.classList.add('active'); }
-    function closeCart() { cartOverlay.classList.remove('active'); }
-
-    cartBack.addEventListener('click', closeCart);
-    // If you have a cart button somewhere:
-    const cartBtn = document.querySelector('.fa-shopping-cart');
-    if (cartBtn) cartBtn.addEventListener('click', openCart);
-  }
-
-  if (checkoutBtn) {
-    checkoutBtn.addEventListener('click', () => {
-      window.location.href = 'order.php';
-    });
-  }
-
   // ===== ORDER =====
   const orderForm = document.getElementById('order-form');
   if (orderForm) {

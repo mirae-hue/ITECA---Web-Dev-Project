@@ -1,0 +1,165 @@
+/* ================= FONTS & COLORS ================= */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap');
+
+/* ================= SIGNUP ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans-serif;
+}
+
+body {
+  background-color: #f4f1ea;
+  background: url('/dragonstone/img/home.jpeg') center/cover no-repeat;
+}
+
+.container {
+  background: rgba(246, 247, 245, 0.98);
+  width: 450px;
+  padding: 1.5rem;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 20px 35px rgba(21, 52, 37, 0.9);
+}
+
+form {
+  margin: 0 2rem;
+}
+
+.form-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+input {
+  color: inherit;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #757575;
+  padding-left: 1.5rem;
+  font-size: 15px;
+}
+
+.input-group {
+  padding: 1% 0;
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  color: #153425;
+}
+
+input:focus {
+  background-color: transparent;
+  outline: transparent;
+  border-bottom: 2px solid #2b6e4a;
+}
+
+input::placeholder {
+  color: transparent;
+}
+
+label {
+  color: #757575;
+  position: relative;
+  left: 1.2em;
+  top: -1.3em;
+  cursor: auto;
+  transition: 0.3s ease all;
+}
+
+input:focus ~ label,
+input:not(:placeholder-shown) ~ label {
+  top: -3em;
+  color: #2b6e4a;
+  font-size: 15px;
+}
+
+/* ================= RECOVERY LINK ================= */
+.recover {
+  text-align: right;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.recover a {
+  text-decoration: none;
+  color: #2b6e4a;
+}
+
+.recover a:hover {
+  color: #2b6e4a;
+  text-decoration: underline;
+}
+
+/* ================= SIGNIN/SIGNUP BUTTON ================= */
+.btn {
+  font-size: 1.1rem;
+  padding: 8px 0;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 100%;
+  background: #2b6e4a;
+  color: white;
+  cursor: pointer;
+  transition: 0.9s;
+}
+
+.btn:hover {
+  background: #22583b;
+}
+
+.or {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.icons {
+  text-align: center;
+}
+
+.icons i {
+  color: #22583b;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: 2px solid #c9e4d6;
+  margin: 0 15px;
+  transition: 1s;
+}
+
+.icons i:hover {
+  background: #648a76;
+  font-size: 1.6rem;
+  border: 2px solid #2b6e4a;
+}
+
+.links {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 4rem;
+  margin-top: 0.9rem;
+  font-weight: bold;
+}
+
+button {
+  color: #22583b;
+  border: none;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+button:hover {
+  text-decoration: underline;
+  color: #22583b;
+}
