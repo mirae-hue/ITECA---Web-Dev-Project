@@ -1,0 +1,497 @@
+/* ================= ADMIN DESIGN TOKENS ================= */
+:root {
+  --ds-forest: #2b6e4a;
+  --ds-fern: #78a980;
+  --ds-teal: #2a6f6b;
+  --ds-earth: #78654a;
+  --ds-fade: #93846e;  
+  --ds-muted: #f6f7f5;
+  --ds-card: #ffffff;
+  --ds-text: #153425;
+  --ds-muted-text: #55605a;
+  --ds-accent: #aecbb3;
+  --transition: all 0.22s ease;
+}
+
+/* ================= RESET & BASE ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: var(--ds-muted);
+  color: var(--ds-text);
+  height: 100vh;
+  display: flex;
+}
+
+/* ================= SIDEBAR ================= */
+aside {
+  width: 260px;
+  background-color: var(--ds-forest);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid var(--ds-fern);
+}
+
+nav {
+  flex: 1;
+  padding: 1rem;
+}
+
+nav a {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  transition: var(--transition);
+  margin-bottom: 0.5rem;
+}
+
+nav a:hover {
+  background-color: var(--ds-fern);
+}
+
+/* ================= MAIN ================= */
+main {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+/* ================= HEADER ================= */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logout-btn {
+  background-color: var(--ds-forest);
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.logout-btn:hover {
+  background-color: var(--ds-earth);
+}
+
+/* ================= METRICS ================= */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background-color: var(--ds-card);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card h2 {
+  color: var(--ds-muted-text);
+  font-size: 1rem;
+}
+
+.card p {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.card img {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ================= TABLE ================= */
+.table-container {
+  background-color: var(--ds-card);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table-container h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background-color: var(--ds-fern);
+}
+
+th, td {
+  padding: 0.5rem;
+  border: 1px solid #cbd5ce;
+}
+
+.view-btn {
+  background-color: var(--ds-forest);
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.view-btn:hover {
+  background-color: var(--ds-fern);
+}
+
+/* ================= PRODUCT MANAGEMENT ================= */
+.success-msg {
+  color: var(--ds-fern);
+  font-weight: 600;
+}
+
+.error-msg {
+  color: var(--ds-earth);
+  font-weight: 600;
+}
+
+.admin-layout {
+  display: flex;
+  height: 100vh;
+  background-color: var(--ds-muted);
+  font-family: Arial, sans-serif;
+}
+
+.sidebar {
+  width: 260px;
+  background-color: var(--ds-forest);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-header {
+  padding: 1.5rem;
+  font-size: 1.75rem;
+  font-weight: bold;
+  text-align: center;
+  border-bottom: 1px solid var(--ds-fern);
+}
+
+.sidebar nav {
+  flex: 1;
+  padding: 1rem;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 0.5rem;
+  border-radius: 4px;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  transition: var(--transition);
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+  background-color: var(--ds-fern);
+}
+
+main {
+  flex: 1;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.dashboard-header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.action-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.add-btn {
+  background-color: var(--ds-forest);
+}
+
+.add-btn:hover {
+  background-color: var(--ds-fern);
+}
+
+.edit-btn {
+  background-color: var(--ds-forest);
+  margin-right: 0.5rem;
+}
+
+.edit-btn:hover {
+  background-color: var(--ds-fern);
+}
+
+.delete-btn {
+  background-color: var(--ds-earth);
+}
+
+.delete-btn:hover {
+  background-color: var(--ds-fade);
+}
+
+.table-container {
+  background-color: var(--ds-card);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table-container h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+thead {
+  background-color: var(--ds-accent);
+}
+
+th, td {
+  padding: 0.5rem;
+  border: 1px solid #cbd5ce;
+}
+
+.product-thumb {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  margin: auto;
+}
+
+.timestamp {
+  font-size: 0.85rem;
+  color: var(--ds-muted-text);
+}
+
+.actions {
+  text-align: center;
+}
+
+.no-data {
+  text-align: center;
+  padding: 1rem;
+  color: var(--ds-muted-text);
+}
+
+/* ================= PRODUCT ADD/UPDATE/DELETE ================= */
+.form-container {
+  background-color: var(--ds-card);
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ds-text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.form-group select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: white;
+  color: var(--ds-text);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 140 140' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M70 90 L40 60 H100 Z' fill='%2355605a'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.65rem;
+}
+
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+/* ================= MOBILE RESPONSIVENESS ================= */
+@media (max-width: 1024px) {
+  body,
+  .admin-layout {
+    flex-direction: column;
+    height: auto;
+  }
+
+  aside,
+  .sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .sidebar nav {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .sidebar nav a {
+    flex: 1 0 auto;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  main {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    flex-direction: column;
+  }
+
+  .table-container {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-header h1 {
+    font-size: 1.5rem;
+  }
+
+  .action-btn,
+  .logout-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .form-container {
+    padding: 1rem;
+  }
+
+  .form-group input, .form-group textarea, .form-group select {
+    font-size: 0.95rem;
+  }
+
+  /* Optional: Stack table rows vertically */
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  td {
+    position: relative;
+    padding-left: 50%;
+    border: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 0;
+    width: 45%;
+    padding-left: 1rem;
+    font-weight: bold;
+    color: var(--ds-muted-text);
+  }
+
+  .product-thumb {
+    margin: 0.5rem auto;
+  }
+}
+
